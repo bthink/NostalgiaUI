@@ -1,0 +1,55 @@
+@theme {
+  /* Colors */
+  --color-nfsu-bg: #07080f;
+  --color-nfsu-panel: #0c1422;
+  --color-nfsu-panel-dark: #080e18;
+  --color-nfsu-border: #1a2f50;
+  --color-nfsu-cyan: #00c8f8;
+  --color-nfsu-cyan-dim: rgba(0, 200, 248, 0.25);
+  --color-nfsu-orange: #ff6600;
+  --color-nfsu-red: #cc3300;
+  --color-nfsu-muted: #5a7898;
+  --color-nfsu-text: #d0e4f8;
+  --color-nfsu-text-dim: #3a5070;
+
+  /* Font */
+  --font-nfsu: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+
+  /* Box shadows */
+  --shadow-nfsu-cyan: 0 0 20px rgba(0, 200, 248, 0.38), 0 0 40px rgba(0, 200, 248, 0.13);
+  --shadow-nfsu-cyan-sm: 0 0 12px rgba(0, 200, 248, 0.19);
+  --shadow-nfsu-cyan-lg: 0 0 30px rgba(0, 200, 248, 0.5), 0 0 60px rgba(0, 200, 248, 0.25);
+  --shadow-nfsu-orange: 0 0 16px rgba(255, 102, 0, 0.31);
+  --shadow-nfsu-orange-lg: 0 0 24px rgba(255, 102, 0, 0.5);
+}
+
+@layer utilities {
+  /* Parallelogram clip-path for buttons */
+  .clip-para {
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  }
+  .clip-para-sm {
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  }
+
+  /* Cyan top accent line for panels */
+  .panel-top-line {
+    position: relative;
+  }
+  .panel-top-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 200, 248, 0.44), transparent);
+  }
+
+  /* Glow shadows */
+  .shadow-nfsu-cyan { box-shadow: var(--shadow-nfsu-cyan); }
+  .shadow-nfsu-cyan-sm { box-shadow: var(--shadow-nfsu-cyan-sm); }
+  .shadow-nfsu-cyan-lg { box-shadow: var(--shadow-nfsu-cyan-lg); }
+  .shadow-nfsu-orange { box-shadow: var(--shadow-nfsu-orange); }
+  .shadow-nfsu-orange-lg { box-shadow: var(--shadow-nfsu-orange-lg); }
+}

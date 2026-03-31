@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@import '../themes/nfsu/styles/tokens.css';
+
+@layer base {
+  body {
+    background-color: var(--color-nfsu-bg);
+    font-family: var(--font-nfsu);
+    color: var(--color-nfsu-text);
+  }
+}
