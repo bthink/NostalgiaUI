@@ -1,10 +1,11 @@
 @import 'tailwindcss';
 @import '../themes/nfsu/styles/tokens.css';
+@import '../themes/diablo/styles/tokens.css';
 
 @layer base {
   body {
-    background-color: var(--color-nfsu-bg);
-    font-family: var(--font-nfsu);
-    color: var(--color-nfsu-text);
+    background-color: var(--color-diablo-bg);
+    font-family: var(--font-diablo);
+    color: var(--color-diablo-text);
   }
 }

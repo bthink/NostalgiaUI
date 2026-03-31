@@ -1,0 +1,93 @@
+@theme {
+  /* Colors */
+  --color-diablo-bg: #0a0604;
+  --color-diablo-panel: #1a130c;
+  --color-diablo-panel-dark: #100c07;
+  --color-diablo-border: #4a3020;
+  --color-diablo-border-light: #7a5838;
+  --color-diablo-gold: #c8a84b;
+  --color-diablo-gold-dim: rgba(200, 168, 75, 0.22);
+  --color-diablo-gold-bright: #e8cc78;
+  --color-diablo-red: #8b1010;
+  --color-diablo-red-bright: #cc2020;
+  --color-diablo-blue: #2244aa;
+  --color-diablo-text: #c8b078;
+  --color-diablo-text-bright: #eadaaa;
+  --color-diablo-text-dim: #5a4530;
+
+  /* Item quality colors (D2 loot system) */
+  --color-diablo-magic: #5858e8;
+  --color-diablo-rare: #c8c840;
+  --color-diablo-set: #40a840;
+  --color-diablo-unique: #a57840;
+  --color-diablo-rune: #cf7020;
+  --color-diablo-crafted: #d06020;
+
+  /* Font */
+  --font-diablo: 'Cinzel', 'Palatino Linotype', 'Book Antiqua', serif;
+
+  /* Shadows */
+  --shadow-diablo-stone: inset 0 2px 6px rgba(0, 0, 0, 0.9), inset 0 -1px 2px rgba(120, 80, 40, 0.2);
+  --shadow-diablo-raised: 0 2px 0 rgba(120, 80, 40, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.6);
+  --shadow-diablo-gold: 0 0 18px rgba(200, 168, 75, 0.28);
+  --shadow-diablo-gold-lg: 0 0 30px rgba(200, 168, 75, 0.45);
+  --shadow-diablo-red: 0 0 14px rgba(139, 16, 16, 0.55);
+}
+
+@layer utilities {
+  /* Stone panel - engraved inset look */
+  .stone-inset {
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.9), inset 0 -1px 2px rgba(120, 80, 40, 0.2);
+  }
+
+  /* Raised stone - embossed button look */
+  .stone-raised {
+    box-shadow: inset 0 1px 0 rgba(200, 168, 75, 0.08), inset 0 -2px 4px rgba(0, 0, 0, 0.7),
+      0 1px 0 rgba(120, 80, 40, 0.3);
+  }
+
+  /* Gold horizontal divider */
+  .gold-divider {
+    position: relative;
+  }
+  .gold-divider::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(200, 168, 75, 0.4), transparent);
+  }
+
+  /* Decorative top accent for panels */
+  .panel-diablo-top {
+    position: relative;
+  }
+  .panel-diablo-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(200, 168, 75, 0.35), transparent);
+  }
+
+  /* Glow utilities */
+  .shadow-diablo-gold {
+    box-shadow: var(--shadow-diablo-gold);
+  }
+  .shadow-diablo-gold-lg {
+    box-shadow: var(--shadow-diablo-gold-lg);
+  }
+  .shadow-diablo-red {
+    box-shadow: var(--shadow-diablo-red);
+  }
+  .shadow-diablo-stone {
+    box-shadow: var(--shadow-diablo-stone);
+  }
+  .shadow-diablo-raised {
+    box-shadow: var(--shadow-diablo-raised);
+  }
+}
