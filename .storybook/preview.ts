@@ -3,6 +3,11 @@ import '../src/styles/base.css'
 
 const preview: Preview = {
   parameters: {
+    options: {
+      storySort: {
+        order: ['NFSU', ['Overview', '*']],
+      },
+    },
     backgrounds: {
       default: 'nfsu',
       values: [{ name: 'nfsu', value: '#07080f' }],
